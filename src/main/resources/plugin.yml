@@ -1,0 +1,8 @@
+name: Skope
+version: ${project.version}
+author: Nikd0
+main: me.nikd0.skope.Main
+api-version: 1.17
+softdepend: [Skript]
+website: "https://github.com/Zettovec/Skope"
+description: "Just another Skript addon."

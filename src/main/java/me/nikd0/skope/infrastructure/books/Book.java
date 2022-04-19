@@ -96,4 +96,8 @@ public class Book {
     public void open(Player player){
         BookUtil.openPlayer(player, getBook());
     }
+
+    public void give(Player player){
+        player.getInventory().addItem(getBook());
+    }
 }

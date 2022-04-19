@@ -5,43 +5,42 @@ import ch.njol.skript.lang.Effect;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser;
 import ch.njol.util.Kleenean;
-import me.nikd0.skope.infrastructure.books.Book;
-import org.bukkit.entity.Player;
+import me.nikd0.skope.infrastructure.books.Page;
 import org.bukkit.event.Event;
 import org.jetbrains.annotations.Nullable;
 
-public class EffBookOpen extends Effect {
+public class EffPageAddText extends Effect {
 
     static {
-        Skript.registerEffect(EffBookOpen.class,
-                "[skope] open [(a|the)] custom book %object% to [player] %player%"
+        Skript.registerEffect(EffPageAddText.class,
+                "[skope] add [plain] text %string% to [(a|the)] custom [book] page %object%"
         );
     }
 
     @SuppressWarnings("null")
-    private Expression<Book> book;
+    private Expression<String> text;
 
     @SuppressWarnings("null")
-    private Expression<Player> player;
+    private Expression<Page> page;
 
     @SuppressWarnings({"unchecked", "null"})
     @Override
     public boolean init(Expression<?>[] expressions, int matchedPattern, Kleenean isDelayed, SkriptParser.ParseResult parser) {
-        this.book = (Expression<Book>) expressions[0];
-        this.player = (Expression<Player>) expressions[1];
+        this.text = (Expression<String>) expressions[0];
+        this.page = (Expression<Page>) expressions[1];
         return true;
     }
 
     @Override
     public String toString(@Nullable Event event, boolean debug) {
-        return String.format("Open player %s a custom book: %s",
-                this.player.toString(event, debug),
-                this.book.toString(event, debug)
+        return String.format("Add a plain text (%s) to a custom page (%s).",
+                this.text.toString(event,debug),
+                this.page.toString(event, debug)
         );
     }
 
     @Override
     protected void execute(Event event) {
-        this.book.getSingle(event).open(player.getSingle(event));
+        this.page.getSingle(event).addText(text.getSingle(event));
     }
 }

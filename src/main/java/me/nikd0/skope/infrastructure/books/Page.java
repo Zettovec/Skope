@@ -20,20 +20,26 @@ public class Page {
         return this;
     }
 
-    public Page setText(TextComponent text){
+    public Page setText(TextComponent textComponent){
         this.texts = new ArrayList<>();
-        return addText(text);
+        return addText(textComponent);
     }
 
-    public Page addText(TextComponent text){
-        this.texts.add(text);
+    public Page setText(String text){
+        return setText(new TextComponent(text));
+    }
+
+    public Page addText(TextComponent textComponent){
+        this.texts.add(textComponent);
         return this;
     }
 
+    public Page addText(String text){
+        return addText(new TextComponent(text));
+    }
+
     public Page newLine(){
-        this.texts.add(
-                new TextComponent("\n")
-        );
+        this.texts.add(new TextComponent("\n"));
         return this;
     }
 

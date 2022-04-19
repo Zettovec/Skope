@@ -53,9 +53,7 @@ public class ExprPage extends SimpleExpression<Page> {
 
         return new Page[] {
             new Page()
-                .setText(new TextComponent(
-                        text.getSingle(event)
-                ))
+                .setText(text.getSingle(event))
         };
     }
 

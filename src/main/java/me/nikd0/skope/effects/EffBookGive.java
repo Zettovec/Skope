@@ -10,11 +10,12 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.jetbrains.annotations.Nullable;
 
-public class EffBookOpen extends Effect {
+public class EffBookGive extends Effect {
 
     static {
-        Skript.registerEffect(EffBookOpen.class,
-                "[skope] open [(a|the)] custom book %object% to [player] %player%"
+        Skript.registerEffect(EffBookGive.class,
+                "[skope] give [(a|the)] custom book %object% to [player] %player%",
+                "[skope] give [player] %player% [(a|the)] custom book %object%"
         );
     }
 
@@ -27,14 +28,19 @@ public class EffBookOpen extends Effect {
     @SuppressWarnings({"unchecked", "null"})
     @Override
     public boolean init(Expression<?>[] expressions, int matchedPattern, Kleenean isDelayed, SkriptParser.ParseResult parser) {
-        this.book = (Expression<Book>) expressions[0];
-        this.player = (Expression<Player>) expressions[1];
+        if (matchedPattern == 0){
+            this.book = (Expression<Book>) expressions[0];
+            this.player = (Expression<Player>) expressions[1];
+        } else {
+            this.player = (Expression<Player>) expressions[0];
+            this.book = (Expression<Book>) expressions[1];
+        }
         return true;
     }
 
     @Override
     public String toString(@Nullable Event event, boolean debug) {
-        return String.format("Open player %s a custom book: %s",
+        return String.format("Give player %s a custom book: %s",
                 this.player.toString(event, debug),
                 this.book.toString(event, debug)
         );
@@ -42,6 +48,6 @@ public class EffBookOpen extends Effect {
 
     @Override
     protected void execute(Event event) {
-        this.book.getSingle(event).open(player.getSingle(event));
+        this.book.getSingle(event).give(player.getSingle(event));
     }
 }

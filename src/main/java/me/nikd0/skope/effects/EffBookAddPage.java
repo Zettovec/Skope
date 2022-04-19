@@ -36,7 +36,8 @@ public class EffBookAddPage extends Effect {
     public String toString(@Nullable Event event, boolean debug) {
         return String.format("Add a custom page (%s) to a custom book (%s).",
                 this.page.toString(event, debug),
-                this.book.toString(event, debug));
+                this.book.toString(event, debug)
+        );
     }
 
     @Override

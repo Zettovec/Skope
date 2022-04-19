@@ -50,7 +50,7 @@ public class ExprBook extends SimpleExpression<Book> {
 
     @Override
     public String toString(@Nullable Event event, boolean debug) {
-        return "a new custom book with a title, author and generation.";
+        return "a new custom book (with a title, author and generation)";
     }
 
     @Override

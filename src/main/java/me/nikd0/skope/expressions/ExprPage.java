@@ -49,7 +49,7 @@ public class ExprPage extends SimpleExpression<Page> {
 
     @Override
     protected Page[] get(Event event) {
-        if (this.text.getSingle(event) == null) return new Page[]{new Page()};
+        if (this.text == null) return new Page[]{new Page()};
 
         return new Page[] {
             new Page()

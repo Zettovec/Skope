@@ -17,6 +17,11 @@
             <id>skript-repo</id>
             <url>https://repo.skriptlang.org/releases/</url>
         </repository>
+        <repository>
+            <id>codemc-repo</id>
+            <url>https://repo.codemc.org/repository/maven-public/</url>
+            <layout>default</layout>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -36,6 +41,11 @@
             <groupId>xyz.upperlevel.spigot.book</groupId>
             <artifactId>spigot-book-api</artifactId>
             <version>1.6</version>
+        </dependency>
+        <dependency>
+            <groupId>de.tr7zw</groupId>
+            <artifactId>item-nbt-api</artifactId>
+            <version>2.9.2</version>
         </dependency>
         <dependency>
             <groupId>org.jetbrains</groupId>
@@ -80,6 +90,10 @@
                         <relocation>
                             <pattern>xyz.upperlevel.spigot.book.</pattern>
                             <shadedPattern>me.nikd0.skope.infrastructure.bookapi.</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>de.tr7zw.changeme.nbtapi.</pattern>
+                            <shadedPattern>me.nikd0.skope.infrastructure.nbtapi.</shadedPattern>
                         </relocation>
                     </relocations>
                 </configuration>

@@ -1,6 +1,9 @@
 package me.nikd0.skope.expressions;
 
 import ch.njol.skript.Skript;
+import ch.njol.skript.doc.Description;
+import ch.njol.skript.doc.Examples;
+import ch.njol.skript.doc.Name;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.ExpressionType;
 import ch.njol.skript.lang.SkriptParser;
@@ -10,6 +13,9 @@ import me.nikd0.skope.infrastructure.books.Book;
 import org.bukkit.event.Event;
 import org.jetbrains.annotations.Nullable;
 
+@Name("Custom book")
+@Description("A custom book in which you may add custom pages.")
+@Examples("set {_book} to a new custom book titled \"Legendary book\"")
 public class ExprBook extends SimpleExpression<Book> {
 
     static {

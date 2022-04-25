@@ -1,6 +1,9 @@
 package me.nikd0.skope.expressions;
 
 import ch.njol.skript.Skript;
+import ch.njol.skript.doc.Description;
+import ch.njol.skript.doc.Examples;
+import ch.njol.skript.doc.Name;
 import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.ExpressionType;
 import ch.njol.skript.lang.SkriptParser;
@@ -12,6 +15,9 @@ import me.nikd0.skope.infrastructure.books.TextComponent;
 import org.bukkit.event.Event;
 import org.jetbrains.annotations.Nullable;
 
+@Name("Custom page")
+@Description("A custom page which may be added to a custom book / in which you may add text or text components.")
+@Examples("set {_page} to a new custom page with text \"Nothing to see here.\"")
 public class ExprPage extends SimpleExpression<Page> {
 
     static {

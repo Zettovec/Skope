@@ -5,6 +5,14 @@ Just another Skript addon, an addon I'm working on currently.
 
 </div>
 
+## Custom GUI (MiWoSe)
+```skript
+[skope] open [a] [new] custom (GUI|gui) (with|of) id %string% with %integer% rows (with name|named) %string% to [player] %player%
+
+#Example:
+open a new custom gui with id "potion_menu" with 4 rows named "Potion Menu" to player
+```
+
 ## Books
 
 ### 1. Create a new book:

@@ -75,7 +75,7 @@ public class EffOpenCustomGUI extends Effect {
 
         ItemStack customTextureItem = new ItemStack(Material.DIAMOND_HOE);
         ItemMeta itemMeta = customTextureItem.getItemMeta();
-        itemMeta.setDisplayName("&r");
+        itemMeta.setDisplayName("§r");
         customTextureItem.setItemMeta(itemMeta);
         NBTItem item = new NBTItem(customTextureItem);
         item.setString("customgui", id);

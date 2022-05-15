@@ -40,6 +40,25 @@ add text "&6&lMy awesome book" to custom page {_page}
 ```
 
 ```skript
+set {_tc} to [a] [new] [skope] text component [with text] %string% (...)
+    ... to run [(a|the)] command %string% on click
+    ... to suggest [(a|the)] command %string% on click
+    ... to open (url|link) %string% on click
+    ... to change page to %integer% on click
+    ... to show text %string% on hover
+    ... to show item %itemstack% on hover
+remove click/hover action from [(a|the)] text component %textcomponent%
+set click/hover action of text component %textcomponent% to (...)
+[skope] add text component %textcomponent% to [(a|the)] custom [book] page %page%
+
+#Example:
+set {_tc} to a new text component "Ahoj" to run command "/lobby" on click
+remove click action from text component {_tc}
+set hover action of text component {_tc} to show text "Sneakyyy!"
+add text component {_tc} to custom page {_page}
+```
+
+```skript
 [skope] add [a] new line to [(a|the)] custom [book] page %page%
 #OR
 [skope] add %integer% [of] new lines to [(a|the)] custom [book] page %page%

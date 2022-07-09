@@ -1,7 +1,7 @@
 <div align="center">
 
 # Skope
-Just another Skript addon, an addon I'm working on currently.
+Just another Skript addon, created and maintained for [MiWoSe](https://miwose.tk).
 
 </div>
 
@@ -11,6 +11,31 @@ Just another Skript addon, an addon I'm working on currently.
 
 #Example:
 open a new custom gui with id "potion_menu" with 4 rows named "Potion Menu" to player
+```
+
+## Open GUIs
+
+Copies TuSKe's syntax - so we needn't change everything after getting rid of it (as it is no longer updated).
+Add `skope` prefix to avoid issues if using both addons.
+
+```skript
+[skope] open [(a|an)] anvil named %string% to [player] %player%
+[skope] (show|open) virtual anvil [inventory] named %string% (to|for) [player] %player%
+
+#Example:
+skope open anvil named "Custom anvil" to player
+```
+
+The same works for dispensers, droppers and hoppers!
+(Use vanilla syntax for GUIs without names - `open anvil for player`.)
+
+### Chest inventory (TuSKe's syntax)
+
+```skript
+[skope] (show|open) virtual chest [inventory] with %integer% row[s] named %string% (to|for) [player] %player%
+
+#Example:
+skope open virtual chest inventory with 3 rows named "Custom chest" to player
 ```
 
 ## Books

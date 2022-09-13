@@ -8,7 +8,6 @@ import ch.njol.util.Kleenean;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
-import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.inventory.Inventory;
 import org.jetbrains.annotations.Nullable;
 
@@ -26,13 +25,13 @@ public class EffOpenChest extends Effect {
     @SuppressWarnings("null")
     private Expression<Player> player;
 
-    private Expression<Integer> size;
+    private Expression<Integer> rows;
 
     @SuppressWarnings({"unchecked", "null"})
     @Override
     public boolean init(Expression<?>[] expressions, int matchedPattern, Kleenean isDelayed, SkriptParser.ParseResult parser) {
         this.name = (Expression<String>) expressions[1];
-        this.size = (Expression<Integer>) expressions[0];
+        this.rows = (Expression<Integer>) expressions[0];
         this.player = (Expression<Player>) expressions[2];
         return true;
     }
@@ -48,7 +47,7 @@ public class EffOpenChest extends Effect {
     @Override
     protected void execute(Event event) {
         Player p = player.getSingle(event);
-        Inventory inv = Bukkit.createInventory(p, size.getSingle(event), name.getSingle(event));
+        Inventory inv = Bukkit.createInventory(p, rows.getSingle(event) * 9, name.getSingle(event));
         p.openInventory(inv);
     }
 }

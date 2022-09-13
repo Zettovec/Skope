@@ -30,7 +30,7 @@ public class EffOpenCustomGUI extends Effect {
 
     static {
         Skript.registerEffect(EffOpenCustomGUI.class,
-                "[skope] open [a] [new] custom (GUI|gui) (with|of) id %string% with %integer% rows (with name|named) %string% to [player] %player%"
+                "[skope] open [a] [new] (custom|miwose) (GUI|gui) (with|of) id %string% with %integer% row[s] (with name|named) %string% to [player] %player%"
         );
     }
 

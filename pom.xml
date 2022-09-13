@@ -6,7 +6,7 @@
 
     <groupId>me.nikd0</groupId>
     <artifactId>Skope</artifactId>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
 
     <repositories>
         <repository>
@@ -45,7 +45,7 @@
         <dependency>
             <groupId>de.tr7zw</groupId>
             <artifactId>item-nbt-api</artifactId>
-            <version>2.9.2</version>
+            <version>2.10.0</version>
         </dependency>
         <dependency>
             <groupId>org.jetbrains</groupId>

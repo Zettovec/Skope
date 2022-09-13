@@ -7,7 +7,7 @@ Just another Skript addon, created and maintained for [MiWoSe](https://miwose.tk
 
 ## Custom GUI (MiWoSe)
 ```skript
-[skope] open [a] [new] custom (GUI|gui) (with|of) id %string% with %integer% rows (with name|named) %string% to [player] %player%
+[skope] open [a] [new] (custom|miwose) (GUI|gui) (with|of) id %string% with %integer% row[s] (with name|named) %string% to [player] %player%
 
 #Example:
 open a new custom gui with id "potion_menu" with 4 rows named "Potion Menu" to player
@@ -36,6 +36,22 @@ The same works for dispensers, droppers and hoppers!
 
 #Example:
 skope open virtual chest inventory with 3 rows named "Custom chest" to player
+```
+
+## Item in item frame
+
+```skript
+[the] [skope] shown item on [item frame] %entity%
+
+#Example:
+set {_item} to the shown item on item frame {_itemFrame}
+```
+
+```skript
+[skope] set [the] shown item on [item frame] %entity% to %itemstack%
+
+#Example:
+set the shown item on item frame {_itemFrame} to {_newItem}
 ```
 
 ## Books

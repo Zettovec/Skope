@@ -5,6 +5,17 @@ Just another Skript addon, created and maintained for [MiWoSe](https://miwose.tk
 
 </div>
 
+## Events
+
+### Hotbar switch event
+```skript
+[player] (hotbar|item held) (switch|change)
+
+#Example:
+on hotbar switch:
+  cancel event
+```
+
 ## Custom GUI (MiWoSe)
 ```skript
 [skope] open [a] [new] (custom|miwose) (GUI|gui) (with|of) id %string% with %integer% row[s] (with name|named) %string% to [player] %player%

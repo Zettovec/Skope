@@ -19,7 +19,7 @@ public class SkriptUtils {
     }
 
     public static void loadAddon() throws IOException {
-        getAddonInstance().loadClasses("me.nikd0.skope", "effects", "expressions");
+        getAddonInstance().loadClasses("me.nikd0.skope", "effects", "expressions", "events");
     }
 
     public static SkriptAddon getAddonInstance() {

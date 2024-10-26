@@ -1,6 +1,8 @@
 package me.nikd0.skope;
 
+import me.nikd0.skope.infrastructure.utils.LuckPermsUtils;
 import me.nikd0.skope.infrastructure.utils.SkriptUtils;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
@@ -18,6 +20,7 @@ public class Main extends JavaPlugin {
         try {
             SkriptUtils.loadAddon();
             logInfo(String.format("§bYou're using §3Skope§b version §3%s§b! Thanks for the support!", this.getVersion()));
+            if (luckPermsEnabled()) LuckPermsUtils.load();
         } catch (Exception e){
             logSevere("Could not load Skope! An error occurred:");
             e.printStackTrace();
@@ -31,6 +34,10 @@ public class Main extends JavaPlugin {
 
     public static String getVersion() {
         return version;
+    }
+
+    public static boolean luckPermsEnabled(){
+        return Bukkit.getPluginManager().getPlugin("LuckPerms") != null;
     }
 
     public static void logInfo(String text){

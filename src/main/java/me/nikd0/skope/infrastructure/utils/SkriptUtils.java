@@ -20,6 +20,7 @@ public class SkriptUtils {
 
     public static void loadAddon() throws IOException {
         getAddonInstance().loadClasses("me.nikd0.skope", "effects", "expressions", "events");
+        if (Main.luckPermsEnabled()) getAddonInstance().loadClasses("me.nikd0.skope", "luckperms");
     }
 
     public static SkriptAddon getAddonInstance() {

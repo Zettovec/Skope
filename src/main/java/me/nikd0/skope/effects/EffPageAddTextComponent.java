@@ -14,7 +14,7 @@ public class EffPageAddTextComponent extends Effect {
 
     static {
         Skript.registerEffect(EffPageAddTextComponent.class,
-                "[skope] add [(a|the)] text component %object% to [(a|the)] custom [book] page %object%"
+                "[skope] add [(a|the)] text component %textcomponent% to [(a|the)] custom [book] page %custompage%"
         );
     }
 

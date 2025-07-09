@@ -14,7 +14,7 @@ public class EffBookAddPage extends Effect {
 
     static {
         Skript.registerEffect(EffBookAddPage.class,
-                "[skope] add [(a|the)] custom [book] page %object% to [(a|the)] custom book %object%"
+                "[skope] add [(a|the)] custom [book] page %custompage% to [(a|the)] custom book %custombook%"
         );
     }
 

@@ -65,6 +65,29 @@ set {_item} to the shown item on item frame {_itemFrame}
 set the shown item on item frame {_itemFrame} to {_newItem}
 ```
 
+## Custom Player Heads
+
+### 1. Create a custom skull
+```skript
+[a] [new] custom (player[ ]head|skull) (by|with) [texture] url %string%
+[a] [new] custom (player[ ]head|skull) (by|with) owner %offlineplayer%
+
+#Example:
+set {_skull} to a new custom player head with texture url "http://textures.minecraft.net/texture/d5137fc0cd51202672382bfae01feb3e1e2b73107e98d2c6c8f719f1da530e68"
+set {_skull} to a custom skull with owner "Notch"
+```
+
+### 2. Place the custom skull
+Use BlockFace in quotes (String) for the facing/rotation: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/block/BlockFace.html
+```skript
+[skope] place [a] custom (player[ ]head|skull) %skull% at [location] %location% [(facing|rotated) %-string%]
+
+#Example:
+place custom playerhead {_skull} at location {_loc}
+place custom skull {_skull} at location(0, 64, 0) facing "SOUTH_SOUTH_WEST"
+```
+
+
 ## Books
 
 ### 1. Create a new book:

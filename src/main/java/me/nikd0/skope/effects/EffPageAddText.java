@@ -13,7 +13,7 @@ public class EffPageAddText extends Effect {
 
     static {
         Skript.registerEffect(EffPageAddText.class,
-                "[skope] add [plain] text %string% to [(a|the)] custom [book] page %object%"
+                "[skope] add [plain] text %string% to [(a|the)] custom [book] page %custompage%"
         );
     }
 

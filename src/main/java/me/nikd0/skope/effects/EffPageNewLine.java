@@ -13,8 +13,8 @@ public class EffPageNewLine extends Effect {
 
     static {
         Skript.registerEffect(EffPageNewLine.class,
-                "[skope] add [a] new line to [(a|the)] custom [book] page %object%",
-                "[skope] add %integer% [of] new lines to [(a|the)] custom [book] page %object%"
+                "[skope] add [a] new line to [(a|the)] custom [book] page %custompage%",
+                "[skope] add %integer% [of] new lines to [(a|the)] custom [book] page %custompage%"
         );
     }
 

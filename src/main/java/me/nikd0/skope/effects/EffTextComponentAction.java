@@ -16,14 +16,14 @@ public class EffTextComponentAction extends Effect {
 
     static {
         Skript.registerEffect(EffTextComponentAction.class,
-                "[skope] remove click action from [(a|the)] text component %object%",
-                "[skope] remove hover action from [(a|the)] text component %object%",
-                "[skope] set click action of text component %object% to run [(a|the)] command %string%",
-                "[skope] set click action of text component %object% to suggest [(a|the)] command %string%",
-                "[skope] set click action of text component %object% to open (url|link) %string%",
-                "[skope] set click action of text component %object% to change page to %integer%",
-                "[skope] set hover action of text component %object% to show text %string%",
-                "[skope] set hover action of text component %object% to show item %itemstack%"
+                "[skope] remove click action from [(a|the)] text component %textcomponent%",
+                "[skope] remove hover action from [(a|the)] text component %textcomponent%",
+                "[skope] set click action of text component %textcomponent% to run [(a|the)] command %string%",
+                "[skope] set click action of text component %textcomponent% to suggest [(a|the)] command %string%",
+                "[skope] set click action of text component %textcomponent% to open (url|link) %string%",
+                "[skope] set click action of text component %textcomponent% to change page to %integer%",
+                "[skope] set hover action of text component %textcomponent% to show text %string%",
+                "[skope] set hover action of text component %textcomponent% to show item %itemstack%"
         );
     }
 

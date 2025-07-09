@@ -9,8 +9,6 @@ import ch.njol.skript.lang.Expression;
 import ch.njol.skript.lang.SkriptParser;
 import ch.njol.util.Kleenean;
 import de.tr7zw.changeme.nbtapi.NBTItem;
-import me.nikd0.skope.infrastructure.books.Book;
-import me.nikd0.skope.infrastructure.books.Page;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;

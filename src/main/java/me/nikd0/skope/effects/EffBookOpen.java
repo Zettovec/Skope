@@ -14,7 +14,7 @@ public class EffBookOpen extends Effect {
 
     static {
         Skript.registerEffect(EffBookOpen.class,
-                "[skope] open [(a|the)] custom book %object% to [player] %player%"
+                "[skope] open [(a|the)] custom book %custombook% to [player] %player%"
         );
     }
 

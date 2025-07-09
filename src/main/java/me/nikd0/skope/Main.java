@@ -1,5 +1,8 @@
 package me.nikd0.skope;
 
+import me.nikd0.skope.infrastructure.DropListener;
+import me.nikd0.skope.infrastructure.QPressEvent;
+import me.nikd0.skope.infrastructure.SimultaneousClickListener;
 import me.nikd0.skope.infrastructure.utils.LuckPermsUtils;
 import me.nikd0.skope.infrastructure.utils.SkriptUtils;
 import org.bukkit.Bukkit;
@@ -21,11 +24,17 @@ public class Main extends JavaPlugin {
             SkriptUtils.loadAddon();
             logInfo(String.format("§bYou're using §3Skope§b version §3%s§b! Thanks for the support!", this.getVersion()));
             if (luckPermsEnabled()) LuckPermsUtils.load();
+            registerListeners();
         } catch (Exception e){
             logSevere("Could not load Skope! An error occurred:");
             e.printStackTrace();
             disablePlugin();
         }
+    }
+
+    private void registerListeners(){
+        Bukkit.getPluginManager().registerEvents(new SimultaneousClickListener(), this);
+        Bukkit.getPluginManager().registerEvents(new DropListener(), this);
     }
 
     public static Main getInstance() {

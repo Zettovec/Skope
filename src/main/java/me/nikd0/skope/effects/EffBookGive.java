@@ -14,8 +14,8 @@ public class EffBookGive extends Effect {
 
     static {
         Skript.registerEffect(EffBookGive.class,
-                "[skope] give [(a|the)] custom book %object% to [player] %player%",
-                "[skope] give [player] %player% [(a|the)] custom book %object%"
+                "[skope] give [(a|the)] custom book %custombook% to [player] %player%",
+                "[skope] give [player] %player% [(a|the)] custom book %custombook%"
         );
     }
 
